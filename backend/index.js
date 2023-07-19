@@ -1,14 +1,30 @@
-require("dotenv").config();
+const express = require("express");
+const cors = require("cors");
+const dotenv = require("dotenv");
 
-const app = require("./src/app");
+dotenv.config();
 
-const port = parseInt(process.env.APP_PORT ?? "6000", 10);
+const app = express();
+const port = process.env.BACKEND_PORT;
 
-app.listen(port, (err) => {
-  if (err) {
-    console.error("Something bad happened");
-  } else {
-    // eslint-disable-next-line no-restricted-syntax
-    console.log(`Server is listening on ${port}`);
-  }
+const router = require("./src/router");
+
+const corsOptions = {
+  origin: process.env.FRONTEND_URL,
+  methods: ["POST"],
+  optionSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
+
+app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.send("Bonjour les amis !");
+});
+
+app.use("/bands", router);
+
+app.listen(port, () => {
+  return console.warn(`Server is actually running on port ${port}`);
 });

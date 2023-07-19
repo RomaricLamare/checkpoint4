@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Rock+Salt&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #889cc2;
+  color: rgb(233, 232, 232);
+  font-family: Montserrat;
+
+  ul,
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(233, 232, 232);
+  }
+}

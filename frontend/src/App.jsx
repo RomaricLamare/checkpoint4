@@ -1,12 +1,12 @@
-import Home from "./pages/Home";
-
-import "./App.css";
+import Router from "../navigation/Router";
+import NavBar from "./components/NavBar";
+import "./styles/global.scss";
 
 function App() {
   return (
     <div className="App">
-      <Home />
-      <p>coucou</p>
+      <NavBar />
+      <Router />
     </div>
   );
 }
