@@ -1,0 +1,46 @@
+.BandCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #e6e7ddae;
+  color: black;
+  height: max-content;
+  width: 400px;
+  font-family: "Inter", sans-serif;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  transition: all 0.3s;
+
+  .BandCard_name {
+    height: 30%;
+    font-family: Montserrat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .BandCard_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 200px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .BandCard_more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bolder;
+  }
+}

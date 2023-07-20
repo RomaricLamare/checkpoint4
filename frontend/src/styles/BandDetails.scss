@@ -1,0 +1,50 @@
+.BandDetails {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .BandDetails_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(230, 231, 221);
+    background: linear-gradient(
+      131deg,
+      rgb(191, 194, 202) 14%,
+      rgba(44, 94, 139, 0.6502801804315477) 89%
+    );
+    color: black;
+    height: 80%;
+    width: 40%;
+    gap: 20px;
+    font-family: Montserrat;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: all 0.3s;
+
+    .BandCard_image {
+      display: flex;
+      justify-content: center;
+      max-width: 450px;
+      align-items: center;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: center;
+      }
+    }
+    .BandDetails_fav_album {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

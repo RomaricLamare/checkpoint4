@@ -1,0 +1,13 @@
+.Home {
+  height: 90vh;
+  bottom: 0;
+
+  .Home_ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+}
