@@ -7,7 +7,8 @@ dotenv.config();
 const app = express();
 const port = process.env.BACKEND_PORT;
 
-const router = require("./src/router");
+const bandsRouter = require("./src/bandsRouter");
+const userRouter = require("./src/userRouter");
 
 const corsOptions = {
   origin: process.env.FRONTEND_URL,
@@ -22,7 +23,8 @@ app.get("/", (req, res) => {
   res.send("Bonjour les amis !");
 });
 
-app.use("/bands", router);
+app.use("/bands", bandsRouter);
+app.use("/user", userRouter);
 
 app.listen(port, () => {
   return console.warn(`Server is actually running on port ${port}`);

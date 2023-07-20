@@ -7,6 +7,8 @@ USE `my_fav_bands`;
 
 DROP TABLE IF EXISTS `band`;
 
+DROP TABLE IF EXISTS `admin`;
+
 CREATE TABLE IF NOT EXISTS `band` (
   `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `name` VARCHAR(50) NOT NULL,
@@ -20,6 +22,13 @@ CREATE TABLE IF NOT EXISTS `band` (
   `image` VARCHAR(200) NOT NULL
 );
 
+CREATE TABLE IF NOT EXISTS `user` (
+    `id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    `username` VARCHAR(100) NOT NULL,
+    `email` VARCHAR(100) NOT NULL,
+    `password` VARCHAR(255) NOT NULL
+);
+
 
 INSERT INTO band (name, genre, country, fav_album, link, facebook, instagram, album_link, image) VALUES 
 ('Depeche Mode', 'New Wave / Synth-Pop', 'England', 'Music for the Masses', 'www.depechemode.com', 'https://www.facebook.com/depechemode/', 'https://www.instagram.com/depechemode/', 'https://open.spotify.com/intl-fr/album/06we4RiGhODMsbAPWmogy2', 'https://i.ytimg.com/vi/aGSKrC7dGcY/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AH-BIAC4AOKAgwIABABGGUgZShlMA8=&rs=AOn4CLBUYo0pojry7RygqB70F_vZfdDHCA'),
@@ -31,3 +40,4 @@ INSERT INTO band (name, genre, country, fav_album, link, facebook, instagram, al
 ('Power Trip', 'Hardcore / Thrash Metal', 'USA', 'Nightmare Logic', 'https://en.wikipedia.org/wiki/Power_Trip_(band)', 'https://www.facebook.com/powertripTX', 'https://www.instagram.com/powertriptx/', 'https://open.spotify.com/intl-fr/album/3suNG9n4WGYQabXhUTkQ70', 'https://www.spirit-of-metal.com/les%20goupes/P/Power%20Trip%20(USA-2)/pics/ce4f_1.jpg'),
 ('Metallica', 'Speed / Thrash Metal', 'USA', 'Master of Puppets', 'https://www.metallica.com', 'https://www.facebook.com/Metallica', 'https://www.instagram.com/metallica/', 'https://open.spotify.com/intl-fr/track/2MuWTIM3b0YEAskbeeFE1i', 'https://cdn-p.smehost.net/sites/7f9737f2506941499994d771a29ad47a/wp-content/uploads/2021/07/metallica-1991.jpeg');
 
+INSERT INTO `user` (username, email, password) VALUES ('Romaric', 'romariclamare@gmail.com', 'root');

@@ -30,9 +30,13 @@ pool.getConnection().catch(() => {
 const models = {};
 
 const BandManager = require("./BandManager");
+const UserManager = require("./UserManager");
 
 models.band = new BandManager();
 models.band.setDatabase(pool);
+
+models.user = new UserManager();
+models.user.setDatabase(pool);
 
 // bonus: use a proxy to personalize error message,
 // when asking for a non existing model
