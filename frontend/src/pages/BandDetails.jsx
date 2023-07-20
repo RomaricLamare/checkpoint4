@@ -1,7 +1,13 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, NavLink } from "react-router-dom";
 import axios from "axios";
-import { ImHeadphones, ImSpotify } from "react-icons/im";
+import {
+  ImHeadphones,
+  ImSpotify,
+  ImFacebook2,
+  ImInstagram,
+  ImPencil2,
+} from "react-icons/im";
 
 function BandDetails() {
   const [data, setData] = useState(undefined);
@@ -38,9 +44,24 @@ function BandDetails() {
               <ImHeadphones />{" "}
             </h2>
           </div>
-          <h4>
-            More infos <a href={data.link}>here</a>
-          </h4>
+          <div className="BandDetails_links">
+            <h4>
+              More infos <a href={data.link}>here</a>
+            </h4>
+            ||
+            <h4>
+              Follow{" "}
+              <a href={data.facebook} target="_blank" rel="noreferrer">
+                <ImFacebook2 />
+              </a>{" "}
+              <a href={data.instagram} target="_blank" rel="noreferrer">
+                <ImInstagram />
+              </a>
+            </h4>
+          </div>
+          <NavLink to={`/bands/${id}/update`} className="BandDetails_update">
+            <ImPencil2 />
+          </NavLink>
         </li>
       )}
     </ul>

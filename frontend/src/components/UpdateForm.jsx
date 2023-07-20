@@ -1,19 +1,21 @@
 import PropTypes from "prop-types";
 
-function CreationForm({ handleChange, formData, handleSubmit }) {
+function UpdateForm({ handleChange, formData, handleSubmit, formError }) {
   return (
-    <form>
+    <form id="update_form">
       <input
         name="name"
         placeholder="Name"
         onChange={handleChange}
         value={formData.name}
+        required
       />
       <input
         name="genre"
         placeholder="Genre"
         onChange={handleChange}
         value={formData.genre}
+        required
       />
       <input
         name="country"
@@ -26,12 +28,14 @@ function CreationForm({ handleChange, formData, handleSubmit }) {
         placeholder="Favorite album"
         onChange={handleChange}
         value={formData.fav_album}
+        required
       />
       <input
         name="link"
         placeholder="Link"
         onChange={handleChange}
         value={formData.link}
+        required
       />
       <input
         name="facebook"
@@ -56,7 +60,13 @@ function CreationForm({ handleChange, formData, handleSubmit }) {
         placeholder="Image"
         onChange={handleChange}
         value={formData.image}
+        required
       />
+      {formError && (
+        <li className="modifierOeuvre_message_error">
+          <p>Veuillez remplir tous les champs requis.</p>
+        </li>
+      )}
       <button type="submit" onClick={handleSubmit}>
         Submit
       </button>
@@ -64,10 +74,11 @@ function CreationForm({ handleChange, formData, handleSubmit }) {
   );
 }
 
-CreationForm.propTypes = {
+UpdateForm.propTypes = {
   handleChange: PropTypes.func.isRequired,
   formData: PropTypes.string.isRequired,
   handleSubmit: PropTypes.func.isRequired,
+  formError: PropTypes.bool.isRequired,
 };
 
-export default CreationForm;
+export default UpdateForm;

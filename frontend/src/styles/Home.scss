@@ -1,6 +1,12 @@
 .Home {
   height: 90vh;
   bottom: 0;
+  background: rgb(230, 231, 221);
+  background: linear-gradient(
+    131deg,
+    rgb(191, 194, 202) 14%,
+    rgba(44, 94, 139, 0.6502801804315477) 89%
+  );
 
   .Home_ul {
     width: 100%;

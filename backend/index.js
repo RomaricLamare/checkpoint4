@@ -11,7 +11,6 @@ const router = require("./src/router");
 
 const corsOptions = {
   origin: process.env.FRONTEND_URL,
-  methods: ["POST"],
   optionSuccessStatus: 200,
 };
 

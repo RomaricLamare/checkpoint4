@@ -1,6 +1,6 @@
 .admin-page {
-  height: 75vh;
-  margin: 10vh 30vw;
+  height: 78vh;
+  margin: 6vh 30vw 10vh 30vw;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -96,5 +96,9 @@
         width: 0%;
       }
     }
+  }
+
+  .modifierOeuvre_message_error {
+    color: red;
   }
 }

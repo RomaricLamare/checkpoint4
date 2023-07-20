@@ -5,6 +5,7 @@
   align-items: center;
 
   .BandDetails_card {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,6 +46,33 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+    }
+
+    .BandDetails_links {
+      display: flex;
+      width: 50%;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .BandDetails_update {
+      position: absolute;
+      top: 2%;
+      right: 3%;
+      font-size: 20px;
+      color: black;
+
+      &:hover {
+        transform: scale(1.2);
+        background-position: -60px;
+        cursor: pointer;
+      }
+
+      &:active {
+        transform: scale(1.4);
+        background-position: 500px;
+      }
     }
   }
 }

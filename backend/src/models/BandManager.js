@@ -7,13 +7,15 @@ class BandManager extends AbstractManager {
 
   insert(band) {
     return this.database.query(
-      `insert into ${this.table} (name, genre, country, fav_album, link, album_link, image) values (?, ?, ?, ?, ?, ?, ?)`,
+      `insert into ${this.table} (name, genre, country, fav_album, link, facebook, instagram, album_link, image) values (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [
         band.name,
         band.genre,
         band.country,
         band.fav_album,
         band.link,
+        band.facebook,
+        band.instagram,
         band.album_link,
         band.image,
       ]
@@ -22,13 +24,15 @@ class BandManager extends AbstractManager {
 
   update(band) {
     return this.database.query(
-      `update ${this.table} set name = ?, genre = ?, country = ?, fav_album = ?, link = ?, album_link = ?, image = ? where id = ?`,
+      `update ${this.table} set name = ?, genre = ?, country = ?, fav_album = ?, link = ?, facebook = ?, instagram = ?, album_link = ?, image = ? where id = ?`,
       [
         band.name,
         band.genre,
         band.country,
         band.fav_album,
         band.link,
+        band.facebook,
+        band.instagram,
         band.album_link,
         band.image,
         band.id,

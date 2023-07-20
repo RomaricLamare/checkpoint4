@@ -11,6 +11,8 @@ function Admin() {
     country: "",
     fav_album: "",
     link: "",
+    facebook: "",
+    instagram: "",
     album_link: "",
     image: "",
   });
@@ -66,7 +68,7 @@ function Admin() {
       {isDataSended && (
         <li className="admin-page_message_success">
           <div className="progress-bar" />
-          <p>Personnage créé !</p>
+          <p>Band added !</p>
         </li>
       )}
     </ul>
