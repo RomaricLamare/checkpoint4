@@ -40,4 +40,4 @@ INSERT INTO band (name, genre, country, fav_album, link, facebook, instagram, al
 ('Power Trip', 'Hardcore / Thrash Metal', 'USA', 'Nightmare Logic', 'https://en.wikipedia.org/wiki/Power_Trip_(band)', 'https://www.facebook.com/powertripTX', 'https://www.instagram.com/powertriptx/', 'https://open.spotify.com/intl-fr/album/3suNG9n4WGYQabXhUTkQ70', 'https://www.spirit-of-metal.com/les%20goupes/P/Power%20Trip%20(USA-2)/pics/ce4f_1.jpg'),
 ('Metallica', 'Speed / Thrash Metal', 'USA', 'Master of Puppets', 'https://www.metallica.com', 'https://www.facebook.com/Metallica', 'https://www.instagram.com/metallica/', 'https://open.spotify.com/intl-fr/track/2MuWTIM3b0YEAskbeeFE1i', 'https://cdn-p.smehost.net/sites/7f9737f2506941499994d771a29ad47a/wp-content/uploads/2021/07/metallica-1991.jpeg');
 
-INSERT INTO `user` (username, email, password) VALUES ('Romaric', 'romariclamare@gmail.com', 'root');
+INSERT INTO `user` (username, email, password) VALUES ('Romaric', 'romariclamare@gmail.com', "$argon2id$v=19$m=65536,t=50,p=1$l+BmXOIo7tNUO6Fbfss3HQ$+tKV5CdCQI94MG8Jl10QPgZVNWmVNrUBopxBhDzu7KQ");

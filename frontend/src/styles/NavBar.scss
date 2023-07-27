@@ -10,8 +10,38 @@
 
   .navBar_links {
     display: flex;
-    width: 30%;
+    width: 80%;
+    margin-right: auto;
     margin-left: 2%;
-    justify-content: space-around;
+    gap: 5%;
+  }
+
+  .login-logo {
+    margin-left: auto;
+    margin-right: 3%;
+    font-size: 30px;
+  }
+
+  .disconnect {
+    all: unset;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 3%;
+  }
+
+  @media screen and (max-width: 600px) {
+    .navBar_links {
+      font-size: small;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .navBar_links {
+      font-size: 10px;
+    }
+
+    .disconnect {
+      font-size: 9px;
+    }
   }
 }

@@ -1,10 +1,12 @@
-import React, { useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import BandCard from "./BandCard";
 import LoginContext from "../../navigation/LoginContext";
 
 function Home() {
   const { bands, setBands } = useContext(LoginContext);
+
+  const [selectedValue, setSelectedValue] = useState("...");
 
   const fetchBands = () => {
     axios
@@ -19,20 +21,36 @@ function Home() {
     fetchBands();
   }, []);
 
+  function handleChange(e) {
+    setSelectedValue(e.target.value);
+  }
+
   return (
     <div className="Home">
+      <select className="Home_select" onChange={handleChange}>
+        <option>...</option>
+        {bands &&
+          bands.map((el) => {
+            return <option key={el.id}>{el.name}</option>;
+          })}
+      </select>
       <ul className="Home_ul">
-        {bands.map((el) => {
-          return (
-            <BandCard
-              key={el.id}
-              name={el.name}
-              image={el.image}
-              id={el.id}
-              refreshBands={fetchBands}
-            />
-          );
-        })}
+        {bands &&
+          bands
+            .filter(
+              (el) => selectedValue === "..." || selectedValue === el.name
+            )
+            .map((el) => {
+              return (
+                <BandCard
+                  key={el.id}
+                  name={el.name}
+                  image={el.image}
+                  id={el.id}
+                  refreshBands={fetchBands}
+                />
+              );
+            })}
       </ul>
     </div>
   );

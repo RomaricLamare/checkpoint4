@@ -7,6 +7,22 @@
     rgb(191, 194, 202) 14%,
     rgba(44, 94, 139, 0.6502801804315477) 89%
   );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1%;
+
+  .Home_select {
+    text-align: center;
+    width: 10%;
+    background-color: #e6e7ddae;
+    color: black;
+    font-family: Montserrat;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
 
   .Home_ul {
     width: 100%;

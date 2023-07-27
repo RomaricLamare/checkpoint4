@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, NavLink } from "react-router-dom";
+import { ImArrowLeft2 } from "react-icons/im";
 import axios from "axios";
 import UpdateForm from "../components/UpdateForm";
 
@@ -109,6 +110,9 @@ function AdminUpdate() {
               formError={formError}
             />
           </li>
+          <NavLink to={`/bands/${id}`} className="AdminUpdate_exit">
+            <ImArrowLeft2 />
+          </NavLink>
         </>
       )}
       {isDataSended && (

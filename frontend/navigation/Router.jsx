@@ -13,6 +13,8 @@ function Router() {
       <Route path="/login" element={<LoginForm />} />
       <Route path="/" element={<Home />} />
       <Route path="/bands/:id" element={<BandDetails />} />
+      {/* <Route path="/admin" element={<Admin />} />
+      <Route path="/bands/:id/update" element={<AdminUpdate />} /> */}
 
       <Route path="/admin" element={<ProtectedRoutes element={<Admin />} />} />
       <Route

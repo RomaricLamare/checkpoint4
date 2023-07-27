@@ -98,3 +98,30 @@
     }
   }
 }
+
+@media screen and (max-width: 800px) {
+  .admin-page {
+    width: 50%;
+    margin: 0 auto;
+
+    .admin-page_title {
+      font-size: medium;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .admin-page {
+    width: 70%;
+    align-items: center;
+  }
+}
+@media screen and (max-height: 900px) {
+  .admin-page {
+    height: 90%;
+    overflow: scroll;
+
+    .admin-page_title {
+      font-size: small;
+    }
+  }
+}

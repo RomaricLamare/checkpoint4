@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import { Navigate } from "react-router-dom";
+import LoginContext from "./LoginContext";
 
-function ProtectedRoutes({ element: Component }) {
-  const isAuthentificated = null;
+function ProtectedRoutes({ element: ReactComponent }) {
+  const { user } = useContext(LoginContext);
 
-  if (!isAuthentificated) return <Navigate to="/login" />;
+  function Component() {
+    return ReactComponent;
+  }
+
+  if (!user) return <Navigate to="/login" />;
 
   return <Component />;
 }

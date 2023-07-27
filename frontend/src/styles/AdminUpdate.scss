@@ -1,4 +1,5 @@
 .admin-page {
+  position: relative;
   height: 78vh;
   margin: 6vh 30vw 10vh 30vw;
   padding: 2rem;
@@ -100,5 +101,24 @@
 
   .modifierOeuvre_message_error {
     color: red;
+  }
+
+  .AdminUpdate_exit {
+    position: absolute;
+    top: 2%;
+    left: 3%;
+    font-size: 20px;
+    color: #fff;
+
+    &:hover {
+      transform: scale(1.2);
+      background-position: -60px;
+      cursor: pointer;
+    }
+
+    &:active {
+      transform: scale(1.4);
+      background-position: 500px;
+    }
   }
 }

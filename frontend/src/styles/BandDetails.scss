@@ -46,6 +46,14 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      .BandDetails_fav_album_link {
+        &:hover {
+          transform: scale(1.05);
+          background-position: -60px;
+          cursor: pointer;
+        }
+      }
     }
 
     .BandDetails_links {
@@ -54,6 +62,19 @@
       justify-content: space-between;
       align-items: center;
       margin-top: 20px;
+
+      .more_infos {
+        display: flex;
+        gap: 3px;
+      }
+
+      .links {
+        &:hover {
+          transform: scale(1.2);
+          background-position: -60px;
+          cursor: pointer;
+        }
+      }
     }
 
     .BandDetails_update {
@@ -72,6 +93,53 @@
       &:active {
         transform: scale(1.4);
         background-position: 500px;
+      }
+    }
+
+    .BandDetails_exit {
+      position: absolute;
+      top: 2%;
+      left: 3%;
+      font-size: 20px;
+      color: black;
+
+      &:hover {
+        transform: scale(1.2);
+        background-position: -60px;
+        cursor: pointer;
+      }
+
+      &:active {
+        transform: scale(1.4);
+        background-position: 500px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1230px) {
+    .BandDetails_card {
+      width: 60%;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .BandDetails_card {
+      width: 70%;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .BandDetails_card {
+      width: 90%;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .BandDetails_card {
+      font-size: small;
+
+      .BandDetails_links {
+        flex-direction: column;
       }
     }
   }

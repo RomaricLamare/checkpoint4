@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 import PropTypes from "prop-types";
 import { ImBin2 } from "react-icons/im";
+import LoginContext from "../../navigation/LoginContext";
 
 function BandCard({ name, image, id, refreshBands }) {
+  const { user } = useContext(LoginContext);
+
   const deleteBandHandler = () => {
     axios
       .delete(
@@ -32,18 +35,20 @@ function BandCard({ name, image, id, refreshBands }) {
           +
         </p>
       </NavLink>
-      <button
-        className="BandCard_delete"
-        type="button"
-        onClick={deleteBandHandler}
-        onKeyDown={(e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            deleteBandHandler();
-          }
-        }}
-      >
-        <ImBin2 />
-      </button>
+      {user && (
+        <button
+          className="BandCard_delete"
+          type="button"
+          onClick={deleteBandHandler}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              deleteBandHandler();
+            }
+          }}
+        >
+          <ImBin2 />
+        </button>
+      )}
     </li>
   );
 }
